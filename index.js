@@ -1,8 +1,10 @@
 // /home/ubuntu/hand_game_backend/index.js
 const express = require("express");
+const cors = require("cors");
 const { calculateRoundScores } = require("./calculator");
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3001; // Backend server port
 
 app.use(express.json());
